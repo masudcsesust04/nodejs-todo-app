@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-express-sample",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.4.6",
+    "jade": ">= 0.0.1",
+    "cradle": "~0.5.7",
+    "express-messages": "0.0.2"
+  }
+}

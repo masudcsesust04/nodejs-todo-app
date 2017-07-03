@@ -1,0 +1,11 @@
+h3= title
+
+form(method="post")
+	input( type="text" name="name" value="#{item.name}" ) 
+	br
+	br
+	textarea( name="description", rows="6", cols="66" )
+		| #{item.description}
+	p
+		input(type="submit", value="Save")
+

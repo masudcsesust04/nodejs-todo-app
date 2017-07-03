@@ -1,0 +1,15 @@
+h3= title
+p 
+	a(href="/items/new") add item
+
+#container
+	- each item in items
+		.item
+			span.id #{item.id}
+			| 
+			a(href="/edit/#{item.id}") edit
+			&nbsp;
+			a(href="/items/#{item.id}") delete
+			p.content Name: #{item.name} | Description: #{item.description} 
+
+

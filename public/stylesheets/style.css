@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.error {
+	color: #933;
+}
+
+.info {
+	color: #393;
+}
+
+.item .id {
+	font-style: italic;
+}
+
+.item .content {
+	border: 1px dashed #888;
+	padding: 1em;
+}
+
