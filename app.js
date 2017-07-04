@@ -115,7 +115,7 @@ app.get('/edit/:id', function(req, res) {
 		console.log(result)
 
 		res.render('edit-form', {
-			title: 'EDIT ITEM ' + req.params.id,
+			title: 'Edit todo item #' + req.params.id,
 			item: result[0]
 		});
   	});
