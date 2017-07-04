@@ -1,15 +1,22 @@
 h3= title
-p 
-	a(href="/items/new") add item
 
-#container
+table.table
+	thead
+		tr
+			th #
+			th Title
+			th Description
+			th Action
+	tbody				
 	- each item in items
-		.item
-			span.id #{item.id}
-			| 
-			a(href="/edit/#{item.id}") edit
-			&nbsp;
-			a(href="/items/#{item.id}") delete
-			p.content Name: #{item.name} | Description: #{item.description} 
+		tr
+			td #{item.id}
+			td #{item.name}
+			td #{item.description} 
+			td
+				a(href="/edit/#{item.id}") Edit
+				&nbsp; | &nbsp;
+				a(href="/items/#{item.id}") Delete			
 
-
+p 
+	a(href="/items/new") Add TODO

@@ -16,9 +16,9 @@ var mysql = require("mysql");
 // First you need to create a connection to the db
 var con = mysql.createConnection({
   host: "localhost",
-  user: "db_username",
-  password: "db_password",
-  database: "db_name"
+  user: "root",
+  password: "root",
+  database: "nodejs_todos"
 });
 
 // Configuration
@@ -62,7 +62,7 @@ app.get('/items', function(req, res) {
 	  console.log('Data received from Db:\n');
 	  console.log(rows);	  
 	  res.render('items', {
-			title: 'TODO ITEMS',
+			title: 'List of TODO item.',
 			items: rows
 		});
 	});
@@ -74,7 +74,7 @@ app.get('/items/new', function(req, res) {
 	var item = {name: '', description: ''};
 
 	res.render('new-form', {
-		title: 'NEW ITEM',
+		title: 'Add todo item',
 		item: item
 	});
 });	
@@ -82,7 +82,7 @@ app.get('/items/new', function(req, res) {
 app.post('/items/new', function(req, res) {
 
 	var item = req.body;
-	console.log();
+	console.log(req);
 
 	con.query('INSERT INTO items SET ?', item, function(err, res) {
 		if (err) {

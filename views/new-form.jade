@@ -1,11 +1,15 @@
 h3= title
 
 form(method="post")
-	input( type="text" name="name" value="#{item.name}" ) 
-	br
-	br
-	textarea( name="description", rows="6", cols="66" )
-		| #{item.description}
-	p
-		input(type="submit", value="Save")
+	div.form-group.row
+		label.col-2.col-form-label Title
+		div.col-10
+			input.form-control(type="text", value="#{item.name}", id="example-text-input")
+
+	div.form-group.row
+		label.col-2.col-form-label Description
+		div.col-10
+			textarea.form-control(name="description", rows="4") #{item.description}
+	
+	button.btn.btn-primary(type="submit") Submit
 
